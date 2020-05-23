@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*, html, body {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* ---------------------- Global CSS ---------------------- */
+.inner-containers{
+    margin: 4rem 0 0;
+}
+
+/* ---------------------- Global CSS ---------------------- */
+
+body {
+    background-image: url(/images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+    .background-pane {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        background-color: rgba(37, 13, 170, 0.2);
+    }
+
+        .super-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column;
+        }
+
+            #title {
+                font-size: 2.4rem;
+                margin: 3rem 1rem;
+                text-align: center;
+            }
+            
+            #description {
+                font-size: 1.2rem;
+                font-style: italic;
+                margin: 0 1rem;
+                text-align: center;
+            }
+
+            .survey-form {
+                margin: 3rem 1rem;
+                padding: 3rem;
+                border-radius: 20px;
+                border: none;
+                background: #e6e6e6;
+                color: #000000;
+                max-width: 600px;
+            }
+
+                .personal-details {
+                    display: flex;
+                    flex-flow: column;
+                    font-size: 1.2rem;
+                }
+
+                    .survey-form h2 {
+                        font-size: 1.6rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    .personal-details div label {
+                        width: fit-content;
+                        width: -moz-fit-content;
+                        margin: 0 0 0.6rem;
+                    }
+
+                    .personal-details input, .survey-form select, .survey-form textarea{
+                        padding: 12px;
+                        font-size: inherit;
+                        margin: 0.6rem 0 1rem;   
+                        border-radius: 4px;
+                        background: #e6e6e6;
+                        border: none;
+                        box-shadow: inset 2px 2px 3px #c6c6c6, inset -2px -2px 3px #ffffff;
+                    }
+
+                    .survey-form select, .survey-form select option {
+                        box-shadow: 2px 2px 3px #c6c6c6, -2px -2px 3px #ffffff;
+                    }
+
+                /* Radio Buttons */
+                .radio-group {
+                    display: grid !important;
+                    grid-template: min-content min-content / 1fr 1fr;
+                    height: fit-content;
+                }
+
+                    .radio-group h2 {
+                        grid-column: span 2;
+                    }
+
+                    .radio-group div, .check-list div {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        flex-flow: row !important;
+                    }
+
+                        .radio-group div input, .radio-group div label {
+                            display: inline;
+                        }
+
+                        .radio-group div input, .check-list div input {
+                            margin-right: 0.8rem !important;
+                            transform: scale(1.5);
+                        }
+
+                /* Check Option list */
+                .check-group {
+                    display: flex;
+                    flex-flow: row wrap;
+                }
+
+                .check-group h2 {
+                    width: 100%;
+                }
+
+                .check-list {
+                    width: 100%;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-between;
+                }
+
+                    .check-list div {
+                        line-height: 2rem;
+                    }
+
+
+                /* Textarea */
+                .survey-form textarea {
+                    width: 100%;
+                    min-height: 100px;
+                    max-height: 200px;
+                    resize: vertical;
+                    font-size: 1.6rem;
+                }
+
+
+                /* Submit Button */
+                .survey-form button {
+                    margin: 1rem 0 0;
+                    width: 100%;
+                    padding: 1rem 0;
+                    font-size: 1.4rem;
+                    border-radius: 0.8rem;
+                    background: #e6e6e6;
+                    border: none;
+                    box-shadow: 2px 2px 3px #c6c6c6, -2px -2px 3px #ffffff;
+                }
+
+                .survey-form button:active, .survey-form button:focus {                    
+                    background: #e6e6e6;
+                    border: none;
+                    box-shadow: inset 2px 2px 3px #c6c6c6, inset -2px -2px 3px #ffffff;
+                }
+
+@media only screen and (max-width: 600px) {
+    /* Survey Form */
+    .survey-form {
+        padding: 3rem 1.6em;
+        width: 100%;
+        border-radius: 12px;
+    }
+
+
+    /* Check list */
+    .check-list {
+        flex-flow: column wrap;
+    }
+}

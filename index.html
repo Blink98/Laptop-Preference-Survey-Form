@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="/css files/style.css">
+</head>
+<body>
+    <div class="background-pane">
+        <div class="super-container">
+            <!-- Image by <a href="https://pixabay.com/users/FuzzyMannerz-1291525/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=885177">Fuzzy Mannerz</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=885177">Pixabay</a> -->
+            <!-- Title -->
+            <h1 id="title">Laptop Hardware Preference Survey</h1>
+            <!-- Survey Description -->
+            <p id="description">Thank you for taking the time to help us know what you want in our laptops.</p>
+            <!-- Form -->
+            <form  class="survey-form" id="survey-form" action="#">
+                <!-- Name input -->
+                <div class="personal-details">
+                    <h2>Your Details</h2>
+                    <label for="name" id="name-label">Full Name</label>
+                    <input placeholder="Enter your Name" type="text" name="name" id="name" required>
+                    <!-- Email Input -->
+                    <label for="email" id="email-label">Email ID</label>
+                    <input placeholder="Enter your Email" type="email" name="email" id="email" pattern=".+@globex.com" required>
+                    <!-- Phone number input -->
+                    <label for="number" id="number-label">Phone Number</label>
+                    <input placeholder="Enter your Number" type="number" name="number" id="number" min="1" max="10">
+                    <!-- Dropdown options -->
+                    <label for="number" id="number-label">Who are you?</label>
+                    <select name="dropdown" id="dropdown">
+                        <option value="student">I am a Student</option>
+                        <option value="instructor">I am a Instructor</option>
+                        <option value="professional">I am a Professional</option>
+                    </select>
+                </div>
+
+                <!-- Radio button group -->
+                <div class="inner-containers radio-group">
+                    <h2>Which processor manufacturer do your prefer?</h2>
+                    <div>
+                        <input type="radio" name="cpu_manufacturer" id="Intel" value="Intel">
+                        <label for="Intel">Intel</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="cpu_manufacturer" id="AMD" value="AMD">
+                        <label for="AMD">AMD</label>
+                    </div>
+                </div>
+
+                <!-- Checkbox Group -->
+                <div class="inner-containers check-group">
+                    <h2>Which one of these are the most important to you while purchasing?</h2>
+                    <div class="check-list">
+                        <div>
+                            <input type="checkbox" name="hardware" id="CPU" value="CPU">
+                            <label for="CPU">CPU</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="hardware" id="GPU" value="GPU">
+                            <label for="GPU">GPU</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="hardware" id="RAM" value="RAM">
+                            <label for="RAM">RAM</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="hardware" id="Storage" value="Storage">
+                            <label for="Storage">Storage</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="hardware" id="Screen" value="Screen">
+                            <label for="Screen">Screen</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Textarea -->
+                <div class="inner-containers">
+                    <h2>Any suggestions for us?</h2>
+                    <textarea placeholder="Your Suggestions..." name="suggestion" id="suggestion" cols="30" rows="10"></textarea>
+                </div>
+                <!-- Button -->
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- JavaScript to testing -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
